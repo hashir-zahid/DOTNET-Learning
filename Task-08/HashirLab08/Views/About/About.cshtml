@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+<h1>About Us</h1>
+<p>We build awesome web applications using ASP.NET Core MVC!</p>
+
+<h2>Simple Calculator</h2>
+<form method="post" asp-controller="About" asp-action="Calculate">
+    <div class="mb-3">
+        <label class="form-label">Number 1:</label>
+        <input type="number" name="num1" class="form-control" placeholder="Enter first number" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Number 2:</label>
+        <input type="number" name="num2" class="form-control" placeholder="Enter second number" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Operation:</label>
+        <select name="operation" class="form-select">
+            <option value="Add">Addition (+)</option>
+            <option value="Subtract">Subtraction (-)</option>
+            <option value="Multiply">Multiplication (×)</option>
+            <option value="Divide">Division (÷)</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
+
+@if (ViewData["Result"] != null)
+{
+    <div class="alert alert-success mt-3">
+        <strong>Result:</strong> @ViewData["Result"]
+    </div>
+}

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Welcome to My MVC Website</h1>
+<p>This is a simple website built with ASP.NET Core MVC.</p>
+
+<h2>Student List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in (List<(string Name, int Age, string Grade)>)ViewData["Students"])
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Grade</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
