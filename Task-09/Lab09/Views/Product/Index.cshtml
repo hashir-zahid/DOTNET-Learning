@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Lab09.Models.Entities.Product> // *******Replace Project name**********
+<h1>Products</h1>
+<a asp-controller="Product" asp-action="Create" class="btn btn-primary float-end my-2">Add Product</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.id</td>
+            <td>@product.Name</td>
+            <td>@product.Description</td>
+            <td>@product.price</td>
+            <td>
+                <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.id" class="btn btn-info text-white">Edit</a>
+                |
+                <form asp-controller="Product" asp-action="Delete" asp-route-id="@product.id" method="post" class="d-inline">
+                    <input type="submit" class="btn btn-danger" value="Delete" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>
