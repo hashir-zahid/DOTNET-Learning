@@ -1,0 +1,70 @@
+﻿@model Lab12.Models.Author
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    h1 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        color: #34495e;
+        margin-bottom: 15px;
+    }
+
+    .row dt {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .row dd {
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .row {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+        margin-right: 15px;
+        color: #2980b9;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Author</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AuthorId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
