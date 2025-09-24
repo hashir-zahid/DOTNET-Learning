@@ -23,22 +23,14 @@ It demonstrates clean coding practices, modular architecture, and reusable compo
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/hashir-zahid/DOTNET-Learning.git
-2. **Download the required ZIP file from this repository.**
-3. **Extract the ZIP file:**
-   - Right-click → "Extract All"  
-   - Or use command line:  
-     ```bash
-     unzip ProjectName.zip
-     ```
-4. **Open the extracted folder in Visual Studio.**
-5. **Restore dependencies:**
+2. **Restore dependencies:**
     ```bash
     dotnet restore
-6. **Run migrations if required (for projects with Entity Framework):**
+3. **Run migrations if required (for projects with Entity Framework):**
    ```bash
    add-migration init
    update-database
-7. **Build and run the project:**
+4. **Build and run the project:**
    ```bash
    dotnet run
 ## 📊 Features (Generic)
@@ -49,4 +41,5 @@ and maintainable structure
 - Use 3 typ of approaches (Code First, Database First, Model First)
 
 ## 👨‍💻 Author
+
 **Muhammad Hashir Zahid**
